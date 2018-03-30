@@ -1,0 +1,27 @@
+<!-- <h2>{{company.name | uppercase}} Details</h2>
+<div><span>Id:</span>{{company.id}}</div>
+<div><span>Name:</span>{{company.name}}</div>
+<br/>
+<div>
+    <label>
+      <input [(ngModel)]="company.name"  placeholder="Please Change runtime ">
+    </label>
+</div> -->
+<!-- <div *ngIf="selectedCompany">
+<h2>{{ selectedCompany.name | uppercase }} Details</h2>
+<div><span>Id: </span>{{selectedCompany.id}}</div>
+<div><span>Name: </span>{{selectedCompany.name}}</div>
+<div>
+    <label>
+      <input [(ngModel)]="selectedCompany.name"  placeholder="Please Change runtime ">
+    </label>
+</div>
+</div> -->
+
+<h2>My Company List</h2>
+<ul class="companyList">
+  <li *ngFor="let company of companyList" (click)="onSelect(company)" [class.selected]="company === selectedCompany">
+    <span class="badge">{{company.id}}</span> {{company.name}}
+  </li>
+</ul>
+<app-add-company [selectedCompany]="selectedCompany"></app-add-company>

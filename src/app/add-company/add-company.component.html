@@ -1,0 +1,12 @@
+<div *ngIf="selectedCompany">
+  <h2>{{ selectedCompany.name | uppercase }} Details</h2>
+  <div>
+    <span>Id: </span>{{selectedCompany.id}}</div>
+  <div>
+    <span>Name: </span>{{selectedCompany.name}}</div>
+  <div>
+    <label>
+      <input [(ngModel)]="selectedCompany.name" placeholder="Please Change runtime ">
+    </label>
+  </div>
+</div>
